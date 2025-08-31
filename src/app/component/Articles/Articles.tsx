@@ -131,8 +131,6 @@ export default function Articles({ articles }: ArticlesProps) {
 
   return (
     <div className='articles-section'>
-      <div className='articles-header'></div>
-
       <div className='articles-grid'>
         {articles.map((article) => (
           <Link
