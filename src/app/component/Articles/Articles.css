@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
 .articles-section {
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   background-color: transparent;
-  background-image: url('/path/to/your/background-image.jpg');
   background-repeat: repeat;
   background-size: 200px 200px;
   background-attachment: local;
@@ -19,8 +17,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle, rgba(255, 234, 205, 0.8) 2px, transparent 2px);
   background-size: 30px 30px;
   background-repeat: repeat;
   z-index: -1;
@@ -34,9 +30,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    linear-gradient(90deg, rgba(255, 120, 1, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(255, 120, 1, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   background-repeat: repeat;
   z-index: -1;
@@ -58,20 +51,20 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 12px;
-  color: #42D200;
+  color: #42d200;
   font-family: 'Inter', sans-serif;
 }
 
 .sub-title {
   font-size: 36px;
-  color: #FF7801;
+  color: white;
   margin: 0;
   font-family: 'Yomogi', cursive;
 }
 
 .articles-grid {
   display: grid;
-  gap: 15px;
+  gap: 20px 40px;
   padding: 15px;
   grid-template-columns: repeat(2, 192px);
   justify-content: center;
@@ -85,7 +78,7 @@
   background-color: white;
   border-radius: 0;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -99,7 +92,7 @@
 
 .article-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .article-image-wrapper {
@@ -188,14 +181,14 @@
   .articles-section {
     padding: 1rem;
   }
-  
+
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding: 8px;
     max-width: 100%;
   }
-  
+
   .article-card {
     width: 100%;
     min-width: 0;
@@ -203,36 +196,36 @@
     height: auto;
     aspect-ratio: 192/168;
   }
-  
+
   .article-image-wrapper {
     width: 100%;
     height: 0;
     padding-bottom: 58.33%;
     position: relative;
   }
-  
+
   .article-info {
     height: auto;
     padding: 6px 8px;
     flex: 1;
   }
-  
+
   .article-title {
     font-size: 9px;
     max-width: none;
   }
-  
+
   .article-date {
     font-size: 7px;
     color: #777;
   }
-  
+
   .article-tag {
     font-size: 8px;
     padding: 2px 8px;
     min-width: 30px;
   }
-  
+
   .articles-header {
     margin: 1rem;
     padding: 0.5rem;
@@ -244,16 +237,16 @@
     gap: 6px;
     padding: 6px;
   }
-  
+
   .article-title {
     font-size: 8px;
   }
-  
+
   .article-date {
     font-size: 6px;
     color: #888;
   }
-  
+
   .article-tag {
     font-size: 7px;
     padding: 1px 6px;

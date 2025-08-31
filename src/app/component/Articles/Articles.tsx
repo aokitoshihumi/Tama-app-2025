@@ -131,10 +131,7 @@ export default function Articles({ articles }: ArticlesProps) {
 
   return (
     <div className='articles-section'>
-      <div className='articles-header'>
-        <h1 className='main-title'>たまっぷ</h1>
-        <h2 className='sub-title'>Pick Up</h2>
-      </div>
+      <div className='articles-header'></div>
 
       <div className='articles-grid'>
         {articles.map((article) => (
