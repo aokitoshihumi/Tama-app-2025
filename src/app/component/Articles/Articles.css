@@ -178,6 +178,7 @@
 /* レスポンシブ対応 */
 @media screen and (max-width: 420px) {
   .articles-section {
+    gap: 20px 30px;
     padding: 1rem;
   }
 
