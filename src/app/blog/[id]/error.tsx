@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Error({
   error,
@@ -8,14 +9,16 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="blog-detail-wrapper">
-      <div className="blog-container">
-        <div className="error-container">
-          <div className="error-content">
+    <div className='blog-detail-wrapper'>
+      <div className='blog-container'>
+        <div className='error-container'>
+          <div className='error-content'>
             <h1>記事の読み込みに失敗しました</h1>
             <p>{error.message}</p>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
-              <button 
+            <div
+              style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}
+            >
+              <button
                 onClick={reset}
                 style={{
                   padding: '12px 24px',
@@ -24,24 +27,24 @@ export default function Error({
                   border: 'none',
                   borderRadius: '20px',
                   cursor: 'pointer',
-                  fontWeight: '600'
+                  fontWeight: '600',
                 }}
               >
                 再試行
               </button>
-              <a 
-                href="/"
+              <Link
+                href='/'
                 style={{
                   padding: '12px 24px',
                   background: '#6c757d',
                   color: 'white',
                   textDecoration: 'none',
                   borderRadius: '20px',
-                  fontWeight: '600'
+                  fontWeight: '600',
                 }}
               >
                 ホームに戻る
-              </a>
+              </Link>
             </div>
           </div>
         </div>
