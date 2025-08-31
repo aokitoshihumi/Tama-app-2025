@@ -1,0 +1,51 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+.bgdesign {
+  /* svgファイルを背景として適応する */
+  background-image: url('/polygon-scatter-haikei.svg');
+  /* 繰り返す */
+  background-repeat: repeat;
+  /* タイルの大きさ（contain は使わない） */
+  background-size: auto;
+  /* しきつめ */
+  background-position: 0 0;
+}
+
+/* リンクのデフォルトスタイル */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 基本的なテキストスタイル */
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* レスポンシブ画像 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* コンテナーの最大幅設定 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

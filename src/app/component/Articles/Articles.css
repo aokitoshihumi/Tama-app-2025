@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+.articles-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+  background-image: url('/path/to/your/background-image.jpg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  background-attachment: local;
+  min-height: 100vh;
+}
+
+.articles-section::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(255, 234, 205, 0.8) 2px, transparent 2px);
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.articles-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 120, 1, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 120, 1, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.articles-header,
+.articles-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.articles-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #42D200;
+  font-family: 'Inter', sans-serif;
+}
+
+.sub-title {
+  font-size: 36px;
+  color: #FF7801;
+  margin: 0;
+  font-family: 'Yomogi', cursive;
+}
+
+.articles-grid {
+  display: grid;
+  gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(2, 192px);
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.article-card {
+  width: 192px;
+  height: 168px;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.article-image-wrapper {
+  width: 100%;
+  height: 112px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.article-image {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #f8f9fa;
+}
+
+.article-info {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.article-title {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 170px;
+}
+
+.meta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 0;
+  margin-top: 2px;
+}
+
+/* 日付スタイル - シンプルなテキスト表示 */
+.article-date {
+  display: block;
+  font-size: 8px;
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  flex: 1;
+  text-align: left;
+}
+
+/* カレンダーアイコンの疑似要素を削除 */
+.article-date::before {
+  display: none;
+}
+
+.article-date::after {
+  display: none;
+}
+
+.article-tag {
+  padding: 3px 15px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333;
+  border-radius: 20px;
+  font-size: 10px;
+  text-align: center;
+  min-width: 60px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 420px) {
+  .articles-section {
+    padding: 1rem;
+  }
+  
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    max-width: 100%;
+  }
+  
+  .article-card {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 192/168;
+  }
+  
+  .article-image-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 58.33%;
+    position: relative;
+  }
+  
+  .article-info {
+    height: auto;
+    padding: 6px 8px;
+    flex: 1;
+  }
+  
+  .article-title {
+    font-size: 9px;
+    max-width: none;
+  }
+  
+  .article-date {
+    font-size: 7px;
+    color: #777;
+  }
+  
+  .article-tag {
+    font-size: 8px;
+    padding: 2px 8px;
+    min-width: 30px;
+  }
+  
+  .articles-header {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .articles-grid {
+    gap: 6px;
+    padding: 6px;
+  }
+  
+  .article-title {
+    font-size: 8px;
+  }
+  
+  .article-date {
+    font-size: 6px;
+    color: #888;
+  }
+  
+  .article-tag {
+    font-size: 7px;
+    padding: 1px 6px;
+  }
+}
